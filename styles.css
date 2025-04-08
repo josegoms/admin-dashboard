@@ -52,7 +52,6 @@ h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
-
 @font-face {
     font-family: "Kanit";
     src:
@@ -73,34 +72,39 @@ h1, h2, h3, h4, h5, h6 {
     font-display: swap;
 }
 
-html {
+body {
     display: grid;
     grid-template-columns: minmax(min-content, 1fr) 5fr;
     grid-template-rows: 1fr 5fr;
-    grid-template-areas: 
+    grid-template-areas:
         "sidebar header"
         "sidebar main";
     height: 100vh;
-    width: 100vw;
 }
 
 /* Styles */
-html {
+body {
     font-family: "Kanit", sans-serif;
     font-size: 16px;
 }
 
 .sidebar {
-    grid-area: sidebar;
-    background-color: gray;
-    color: white;
+    grid-row: 1 / span 3;
+    grid-column: 1;
+    background-color: rgb(105, 103, 103, 0.2);
+    backdrop-filter: blur(10px);
+    color: black;
     padding: 1em;
+    height: 100%;
+
+    box-shadow:  0 2px 4px rgba(0,0,0,0.1),
+                 0 4px 8px rgba(0,0,0,0.1),
+                 0 8px 16px rgba(0,0,0,0.1);
 }
 
 .sidebar div {
     display: flex;
     align-items: center;
-    color: white;
     gap: 2px;
 }
 
@@ -110,10 +114,75 @@ svg {
 }
 
 .header {
-    grid-area: header;
+    grid-row: 1;
+    grid-column: 2;
+    background-color: black;
+    box-shadow:  0 2px 4px rgba(0,0,0,0.1),
+                 0 4px 8px rgba(0,0,0,0.1),
+                 0 8px 16px rgba(0,0,0,0.1);
+
+    display: grid;
+    grid-template-rows: 1fr 2fr;
 }
 
-.main {
-    grid-area: main;
-    overflow-y: auto;
+.search-profile {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
 }
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 40%;
+}
+
+.search button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.search input {
+    background-color: transparent;
+    border: transparent;
+    color: white;
+    padding: 0.5em;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.profile img {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+.profile p {
+    font-weight: 700;
+}
+
+.header svg {
+    height: 2em;
+    fill: white;
+}
+
+input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
+  
+
+.main {
+    grid-row: 2;
+    grid-column: 2;
+}
+
