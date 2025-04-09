@@ -88,7 +88,7 @@ body {
 .sidebar {
     grid-row: 1 / span 3;
     grid-column: 1;
-    background-color: rgb(105, 103, 103, 0.2);
+    background: linear-gradient(to bottom, #ffffff, #cac9c9);
     backdrop-filter: blur(10px);
     color: black;
     padding: 1em;
@@ -120,7 +120,7 @@ body {
 .header {
     grid-row: 1;
     grid-column: 2;
-    background-color: black;
+    background: linear-gradient(to bottom, #000000, #222222);
     box-shadow:  0 2px 4px rgba(0,0,0,0.1),
                  0 4px 8px rgba(0,0,0,0.1),
                  0 8px 16px rgba(0,0,0,0.1);
@@ -238,7 +238,74 @@ input::-webkit-search-cancel-button {
 
 .main {
   display: grid;
-  grid-template-columns: 1fr min-content;
+  grid-template-columns: 4.5fr 1fr;
 
   padding: 2em 1em;
+  gap: 1em;
 }
+
+.projects {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1em;
+  max-height: 70vh;
+  padding: 1em;
+}
+
+.cards,
+.announcements-topics {
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 15px;
+  border-top: 5px solid black;
+  border-left: 5px solid black;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+
+  padding: 1em;
+  position: relative;
+}
+
+.cards p:nth-child(1) {
+  font-weight: 700;
+}
+
+.cards p:nth-child(2) {
+  font-size: 0.8em;
+}
+
+.cards svg {
+  height: 1.5em;
+  fill: black;
+}
+
+.actions {
+  justify-self: flex-end;
+
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 0.5em;
+
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+}
+
+.topic {
+  font-size: 0.8em;
+}
+
+.topic p:nth-child(1) {
+  font-weight: 700;
+}
+
+.announcements-topics div:not(:last-child) {
+  margin-bottom: 1em;
+}
+
