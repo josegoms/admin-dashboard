@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     display: grid;
-    grid-template-columns: minmax(min-content, 1fr) 5fr;
+    grid-template-columns: minmax(max-content, 1fr) 5fr;
     grid-template-rows: 1fr 5fr;
     height: 100vh;
 
