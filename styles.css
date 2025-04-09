@@ -258,7 +258,8 @@ input::-webkit-search-cancel-button {
 }
 
 .cards,
-.announcements-topics {
+.announcements-topics,
+.trending-profiles {
   display: flex;
   flex-direction: column;
 
@@ -295,6 +296,8 @@ input::-webkit-search-cancel-button {
   position: absolute;
   bottom: 1em;
   right: 1em;
+
+  background-color: white;
 }
 
 .topic {
@@ -305,7 +308,50 @@ input::-webkit-search-cancel-button {
   font-weight: 700;
 }
 
-.announcements-topics div:not(:last-child) {
-  margin-bottom: 1em;
+.announcements-topics div:not(:last-child),
+.trending-profiles div:not(:last-child) {
+  padding-bottom: 1em;
+  border-bottom: 1px solid black;
 }
 
+.announcements-topics div:not(:first-child),
+.trending-profiles div:not(:last-child) {
+  padding-top: 1em;
+}
+
+.profiles img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 1px dotted black;
+  padding: 0.5em;
+  background-color: transparent;
+}
+
+.profiles {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+
+  font-size: 0.8em;
+}
+
+.profile-info p:first-child {
+  font-weight: 700;
+}
+
+.projects > div:first-child {
+  font-weight: 700;
+  padding-left: 1em;
+}
+
+
+.announcements > div:first-child,
+.trending > div:first-child {
+  font-weight: 700;
+  padding-left: 0.3em;
+}
+
+.trending > div:first-child {
+  margin-top: 1rem;
+}
