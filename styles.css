@@ -119,6 +119,7 @@ body {
 .sidebar svg {
     height: 2em;
     fill: currentColor;
+    min-width: 2em;
 }
 
 .header {
