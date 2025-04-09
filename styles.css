@@ -318,6 +318,7 @@ input::-webkit-search-cancel-button {
 
 .topic {
   font-size: 0.8em;
+  flex-shrink: 0;
 }
 
 .topic p:nth-child(1) {
@@ -351,6 +352,7 @@ input::-webkit-search-cancel-button {
 }
 
 .profiles {
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   gap: 1em;
