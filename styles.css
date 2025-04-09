@@ -338,6 +338,8 @@ input::-webkit-search-cancel-button {
 
 .announcements-treding {
   position: sticky;
+  display: grid;
+  grid-template-columns: 15em;
 }
 
 .profiles img {
