@@ -77,8 +77,6 @@ body {
     grid-template-columns: minmax(max-content, 1fr) 5fr;
     grid-template-rows: 1fr 5fr;
     height: 100vh;
-
-    position: relative;
 }
 
 /* Styles */
@@ -114,6 +112,10 @@ body {
     display: flex;
     align-items: center;
     gap: 1em;
+}
+
+.sidebar div:not(:first-child) {
+  cursor: pointer;
 }
 
 .sidebar svg {
@@ -184,7 +186,7 @@ body {
 .buttons {
     display: flex;
     align-items: center;
-    gap: 2em;
+    gap: 1em;
     color: white;
     cursor: pointer;
 }
@@ -311,6 +313,7 @@ input::-webkit-search-cancel-button {
   right: 1em;
 
   background-color: white;
+  cursor: pointer;
 }
 
 .topic {
@@ -328,7 +331,7 @@ input::-webkit-search-cancel-button {
 }
 
 .announcements-topics div:not(:first-child),
-.trending-profiles div:not(:last-child) {
+.trending-profiles div:not(:first-child) {
   padding-top: 1em;
 }
 
@@ -353,6 +356,7 @@ input::-webkit-search-cancel-button {
   gap: 1em;
 
   font-size: 0.8em;
+  cursor: pointer;
 }
 
 .profile-info p:first-child {
