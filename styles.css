@@ -77,6 +77,8 @@ body {
     grid-template-columns: minmax(min-content, 1fr) 5fr;
     grid-template-rows: 1fr 5fr;
     height: 100vh;
+
+    position: relative;
 }
 
 /* Styles */
@@ -95,6 +97,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1em;
+
+    position: sticky;
 
     box-shadow:  0 2px 4px rgba(0,0,0,0.1),
                  0 4px 8px rgba(0,0,0,0.1),
@@ -134,6 +138,10 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
+}
+
+.search-profile {
+  position: sticky;
 }
 
 .search {
@@ -317,6 +325,10 @@ input::-webkit-search-cancel-button {
 .announcements-topics div:not(:first-child),
 .trending-profiles div:not(:last-child) {
   padding-top: 1em;
+}
+
+.announcements-treding {
+  position: sticky;
 }
 
 .profiles img {
