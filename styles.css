@@ -176,6 +176,8 @@ body {
     border: 1px dotted white;
     padding: 0.5em;
     background-color: transparent;
+    overflow: hidden;
+    flex-shrink: 0;
 }
 
 .profile,
@@ -214,6 +216,8 @@ input::-webkit-search-cancel-button {
   border: 2px dotted white;
   padding: 0.5em;
   background-color: transparent;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 .greetings div {
@@ -339,6 +343,8 @@ input::-webkit-search-cancel-button {
   border: 1px dotted black;
   padding: 0.5em;
   background-color: transparent;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 .profiles {
